@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSL Forge: Commission Your Vision</title>
+    <title>NSL Forge: Start Your Custom Creation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-navy: #1C3150;     /* Deep, rich navy for primary elements */
-            --accent-gold: #B8860B;      /* Muted, elegant gold for accents */
-            --light-grey-blue: #F0F4F8;  /* Very light background for professionalism */
-            --off-white: #FFFFFF;
-            --text-dark: #333333;
-            --text-medium: #555555;
-            --border-light: #DDDDDD;
-            --shadow-subtle: rgba(0, 0, 0, 0.08);
-            --shadow-hover: rgba(0, 0, 0, 0.15);
+            /* Restored and refined color palette */
+            --primary-blue: #0056b3;     /* A deep, trusted blue */
+            --accent-gold: #DAA520;      /* Rich, inviting gold */
+            --light-bg: #F8F9FA;         /* Soft, breathable background */
+            --white: #FFFFFF;
+            --text-dark: #212529;
+            --text-light: #6C757D;
+            --border-subtle: #CED4DA;
+            --shadow-soft: rgba(0, 0, 0, 0.05);
+            --shadow-hover: rgba(0, 0, 0, 0.1);
         }
 
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light-grey-blue);
+            background-color: var(--light-bg);
             color: var(--text-dark);
             display: flex;
             justify-content: center;
@@ -35,15 +36,15 @@
         }
 
         .container {
-            background-color: var(--off-white);
+            background-color: var(--white);
             border-radius: 12px;
-            box-shadow: 0 10px 30px var(--shadow-subtle);
-            padding: 50px;
+            box-shadow: 0 15px 40px var(--shadow-soft); /* Deeper, softer shadow */
+            padding: 40px 60px; /* More horizontal padding */
             width: 100%;
-            max-width: 700px; /* Wider for a more spacious feel */
+            max-width: 680px; /* Optimized width for readability */
             text-align: center;
             box-sizing: border-box;
-            animation: fadeIn 0.8s ease-out; /* Subtle fade-in for the container */
+            animation: fadeIn 0.8s ease-out;
         }
 
         @keyframes fadeIn {
@@ -52,23 +53,23 @@
         }
 
         header {
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 35px;
             padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-subtle); /* Clean separator */
         }
 
         header h1 {
-            font-family: 'Crimson Pro', serif; /* Elegant serif for the main title */
-            color: var(--primary-navy);
-            font-size: 3.5em;
+            font-family: 'Crimson Pro', serif;
+            color: var(--primary-blue);
+            font-size: 3.2em; /* Slightly adjusted size */
             margin-bottom: 10px;
-            letter-spacing: -0.5px; /* Tighter letter spacing for refinement */
+            letter-spacing: -0.8px; /* Tighter for modern look */
         }
 
         header p {
-            color: var(--text-medium);
-            font-size: 1.1em;
-            max-width: 500px;
+            color: var(--text-light);
+            font-size: 1.05em;
+            max-width: 550px;
             margin: 0 auto;
         }
 
@@ -77,38 +78,38 @@
         }
 
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 25px; /* Reduced spacing */
         }
 
         .form-group label {
             display: block;
-            font-size: 1.05em;
-            color: var(--primary-navy);
-            margin-bottom: 10px;
-            font-weight: 600; /* Slightly bolder labels */
-            letter-spacing: 0.2px;
+            font-size: 1em; /* Slightly smaller, more refined */
+            color: var(--text-dark);
+            margin-bottom: 8px; /* Reduced spacing */
+            font-weight: 600;
+            letter-spacing: 0.1px;
         }
 
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="tel"] {
-            width: calc(100% - 28px); /* Adjusting for padding */
-            padding: 14px 12px;
-            border: 1px solid var(--border-light);
+            width: calc(100% - 24px); /* Consistent padding calculation */
+            padding: 12px;
+            border: 1px solid var(--border-subtle);
             border-radius: 8px;
-            font-size: 1em;
+            font-size: 0.95em;
             color: var(--text-dark);
-            background-color: var(--off-white);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04); /* Subtle inner shadow */
+            background-color: var(--white);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
         }
 
         .form-group input[type="file"] {
             width: 100%;
-            padding: 14px 0;
+            padding: 12px 0;
             border: none;
             border-radius: 8px;
-            font-size: 1em;
+            font-size: 0.95em;
             color: var(--text-dark);
             cursor: pointer;
             outline: none;
@@ -118,88 +119,88 @@
         .form-group input[type="email"]:focus,
         .form-group input[type="tel"]:focus,
         .form-group input[type="file"]:focus {
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.2); /* Gold accent focus ring */
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15); /* Blue focus ring */
             outline: none;
         }
 
         .form-group small {
             display: block;
-            margin-top: 8px;
-            color: var(--text-medium);
-            font-size: 0.9em;
+            margin-top: 6px;
+            color: var(--text-light);
+            font-size: 0.85em;
             line-height: 1.4;
         }
 
         .required {
-            color: #DC3545; /* Clear, professional red for required */
+            color: #DC3545; /* Standard error red */
             font-weight: normal;
         }
 
         button[type="submit"] {
-            background-color: var(--primary-navy);
-            color: var(--off-white);
-            padding: 16px 40px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 35px;
             border: none;
             border-radius: 8px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
             width: 100%;
             margin-top: 30px;
-            box-shadow: 0 5px 15px var(--shadow-subtle);
-            letter-spacing: 0.8px;
-            text-transform: uppercase; /* Uppercase for a stronger call to action */
+            box-shadow: 0 4px 10px var(--shadow-soft);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         button[type="submit"]:hover {
             background-color: var(--accent-gold); /* Gold on hover */
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px var(--shadow-hover);
+            transform: translateY(-1px); /* More subtle lift */
+            box-shadow: 0 6px 15px var(--shadow-hover);
         }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .container {
-                margin: 25px;
-                padding: 35px;
+                margin: 20px;
+                padding: 30px 40px;
             }
 
             header h1 {
-                font-size: 2.8em;
+                font-size: 2.5em;
             }
 
             button[type="submit"] {
-                font-size: 1.1em;
-                padding: 14px 30px;
+                font-size: 1em;
+                padding: 12px 25px;
             }
         }
 
         @media (max-width: 480px) {
             .container {
                 margin: 15px;
-                padding: 25px;
+                padding: 25px 30px;
             }
 
             header h1 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
 
             .form-group label {
-                font-size: 0.95em;
+                font-size: 0.9em;
             }
 
             .form-group input[type="text"],
             .form-group input[type="email"],
             .form-group input[type="tel"] {
-                padding: 12px 10px;
-                font-size: 0.95em;
+                padding: 10px;
+                font-size: 0.9em;
             }
 
             button[type="submit"] {
-                font-size: 1em;
-                padding: 12px 20px;
+                font-size: 0.95em;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -207,27 +208,27 @@
 <body>
     <div class="container">
         <header>
-            <h1>NSL Forge: Commission Your Vision</h1>
-            <p>At NSL Forge, we specialize in transforming your unique ideas into custom creations. Please provide your details below to initiate your personalized commission with us.</p>
+            <h1>NSL Forge: Bring Your Vision to Life</h1>
+            <p>Ready to create something truly unique? Just a few simple steps to start your custom commission with us.</p>
         </header>
 
         <main>
             <form action="https://formsubmit.co/nslcreatesofficial@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <label for="name">Your Full Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required aria-label="Full Name">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="Name" placeholder="Full Name" required aria-label="Full Name">
                 </div>
 
                 <div class="form-group">
-                    <label for="reference-image">Reference Image (Your Inspiration) <span class="required">*</span></label>
+                    <label for="reference-image">Your Design Inspiration <span class="required">*</span></label>
                     <input type="file" id="reference-image" name="Reference_Image" accept="image/*" required aria-label="Reference Image">
-                    <small>Kindly upload an image that precisely captures the essence of your desired creation. (Accepted formats: JPG, PNG, GIF, etc.)</small>
+                    <small>Upload an image that inspires your desired creation. Think colors, shapes, or concepts!</small>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address (Optional)</label>
-                    <input type="email" id="email" name="Email" placeholder="e.g., yourname@example.com" aria-label="Email Address">
+                    <input type="email" id="email" name="Email" placeholder="you@example.com" aria-label="Email Address">
                 </div>
 
                 <div class="form-group">
@@ -235,7 +236,7 @@
                     <input type="tel" id="phone" name="Phone_Number" placeholder="e.g., +91 9876543210" required aria-label="Phone Number">
                 </div>
 
-                <button type="submit">Submit Your Commission Request</button>
+                <button type="submit">Submit Your Design Request</button>
             </form>
         </main>
     </div>
