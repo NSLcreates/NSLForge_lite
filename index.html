@@ -3,62 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSL Forge - Craft Your Vision</title>
+    <title>NSL Forge: Commission Your Vision</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --dark-charcoal: #2F4F4F; /* Darker, sophisticated grey-blue */
-            --steel-blue: #4682B4;    /* A classic steel blue */
-            --powder-blue: #B0E0E6;   /* Soft, light blue for background */
-            --white: #FFFFFF;
-            --text-color: #333333;
-            --border-color: #A9A9A9;  /* Darker grey for borders */
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --hover-shadow-color: rgba(0, 0, 0, 0.18);
+            --primary-navy: #1C3150;     /* Deep, rich navy for primary elements */
+            --accent-gold: #B8860B;      /* Muted, elegant gold for accents */
+            --light-grey-blue: #F0F4F8;  /* Very light background for professionalism */
+            --off-white: #FFFFFF;
+            --text-dark: #333333;
+            --text-medium: #555555;
+            --border-light: #DDDDDD;
+            --shadow-subtle: rgba(0, 0, 0, 0.08);
+            --shadow-hover: rgba(0, 0, 0, 0.15);
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--powder-blue);
-            color: var(--text-color);
+            background-color: var(--light-grey-blue);
+            color: var(--text-dark);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            line-height: 1.6;
         }
 
         .container {
-            background-color: var(--white);
-            border-radius: 15px; /* Slightly more rounded corners */
-            box-shadow: 0 8px 30px var(--shadow-color); /* Enhanced shadow */
-            padding: 45px;
+            background-color: var(--off-white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px var(--shadow-subtle);
+            padding: 50px;
             width: 100%;
-            max-width: 650px; /* Slightly wider container */
+            max-width: 700px; /* Wider for a more spacious feel */
             text-align: center;
             box-sizing: border-box;
+            animation: fadeIn 0.8s ease-out; /* Subtle fade-in for the container */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         header {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 25px;
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif; /* Elegant heading font */
-            color: var(--dark-charcoal);
-            font-size: 3em; /* Larger and more impactful */
-            margin-bottom: 12px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Softer text shadow */
+            font-family: 'Crimson Pro', serif; /* Elegant serif for the main title */
+            color: var(--primary-navy);
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px; /* Tighter letter spacing for refinement */
         }
 
         header p {
-            color: #555;
-            font-size: 1.15em;
-            line-height: 1.6;
+            color: var(--text-medium);
+            font-size: 1.1em;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         form {
@@ -66,112 +77,129 @@
         }
 
         .form-group {
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .form-group label {
             display: block;
-            font-size: 1.15em;
-            color: var(--dark-charcoal);
+            font-size: 1.05em;
+            color: var(--primary-navy);
             margin-bottom: 10px;
-            font-weight: 700;
+            font-weight: 600; /* Slightly bolder labels */
+            letter-spacing: 0.2px;
         }
 
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="tel"] {
-            width: calc(100% - 24px); /* Adjusting for padding */
+            width: calc(100% - 28px); /* Adjusting for padding */
             padding: 14px 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 10px; /* More rounded input fields */
-            font-size: 1.05em;
-            color: var(--text-color);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--text-dark);
+            background-color: var(--off-white);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Lighter inner shadow */
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04); /* Subtle inner shadow */
         }
 
         .form-group input[type="file"] {
             width: 100%;
             padding: 14px 0;
             border: none;
-            border-radius: 10px;
-            font-size: 1.05em;
-            color: var(--text-color);
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--text-dark);
             cursor: pointer;
-            outline: none; /* Remove default outline */
+            outline: none;
         }
 
         .form-group input[type="text"]:focus,
         .form-group input[type="email"]:focus,
         .form-group input[type="tel"]:focus,
         .form-group input[type="file"]:focus {
-            border-color: var(--steel-blue);
-            box-shadow: 0 0 0 4px rgba(70, 130, 180, 0.25); /* Steel blue shadow */
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.2); /* Gold accent focus ring */
             outline: none;
         }
 
         .form-group small {
             display: block;
-            margin-top: 7px;
-            color: #888;
-            font-size: 0.95em;
+            margin-top: 8px;
+            color: var(--text-medium);
+            font-size: 0.9em;
+            line-height: 1.4;
         }
 
         .required {
-            color: #D32F2F; /* A softer red for required fields */
+            color: #DC3545; /* Clear, professional red for required */
             font-weight: normal;
         }
 
         button[type="submit"] {
-            background-color: var(--steel-blue);
-            color: var(--white);
-            padding: 16px 35px;
+            background-color: var(--primary-navy);
+            color: var(--off-white);
+            padding: 16px 40px;
             border: none;
-            border-radius: 10px; /* More rounded button */
-            font-size: 1.3em;
-            font-weight: 700;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             width: 100%;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px var(--shadow-color);
-            letter-spacing: 0.5px; /* Slight letter spacing for readability */
+            margin-top: 30px;
+            box-shadow: 0 5px 15px var(--shadow-subtle);
+            letter-spacing: 0.8px;
+            text-transform: uppercase; /* Uppercase for a stronger call to action */
         }
 
         button[type="submit"]:hover {
-            background-color: var(--dark-charcoal);
-            transform: translateY(-3px); /* More pronounced lift */
-            box-shadow: 0 8px 20px var(--hover-shadow-color);
+            background-color: var(--accent-gold); /* Gold on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--shadow-hover);
         }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .container {
-                margin: 15px;
-                padding: 30px;
+                margin: 25px;
+                padding: 35px;
             }
 
             header h1 {
-                font-size: 2.5em;
+                font-size: 2.8em;
+            }
+
+            button[type="submit"] {
+                font-size: 1.1em;
+                padding: 14px 30px;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 20px;
+                margin: 15px;
+                padding: 25px;
             }
 
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
             .form-group label {
-                font-size: 1em;
+                font-size: 0.95em;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="tel"] {
+                padding: 12px 10px;
+                font-size: 0.95em;
             }
 
             button[type="submit"] {
-                font-size: 1.1em;
-                padding: 14px 25px;
+                font-size: 1em;
+                padding: 12px 20px;
             }
         }
     </style>
@@ -179,35 +207,35 @@
 <body>
     <div class="container">
         <header>
-            <h1>NSL Forge: Craft Your Vision</h1>
-            <p>We're excited to help bring your unique ideas to life. Please share your details below to begin your custom commission.</p>
+            <h1>NSL Forge: Commission Your Vision</h1>
+            <p>At NSL Forge, we specialize in transforming your unique ideas into custom creations. Please provide your details below to initiate your personalized commission with us.</p>
         </header>
 
         <main>
             <form action="https://formsubmit.co/nslcreatesofficial@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <label for="name">Your Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+                    <label for="name">Your Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required aria-label="Full Name">
                 </div>
 
                 <div class="form-group">
                     <label for="reference-image">Reference Image (Your Inspiration) <span class="required">*</span></label>
-                    <input type="file" id="reference-image" name="Reference_Image" accept="image/*" required>
-                    <small>Please upload an image that inspires your commission. (Accepted formats: JPG, PNG, GIF, etc.)</small>
+                    <input type="file" id="reference-image" name="Reference_Image" accept="image/*" required aria-label="Reference Image">
+                    <small>Kindly upload an image that precisely captures the essence of your desired creation. (Accepted formats: JPG, PNG, GIF, etc.)</small>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address (Optional)</label>
-                    <input type="email" id="email" name="Email" placeholder="e.g., yourname@example.com">
+                    <input type="email" id="email" name="Email" placeholder="e.g., yourname@example.com" aria-label="Email Address">
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="Phone_Number" placeholder="e.g., +91 9876543210" required>
+                    <label for="phone">Contact Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="Phone_Number" placeholder="e.g., +91 9876543210" required aria-label="Phone Number">
                 </div>
 
-                <button type="submit">Submit Your Request</button>
+                <button type="submit">Submit Your Commission Request</button>
             </form>
         </main>
     </div>
