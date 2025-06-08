@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSL Forge - Commission Request</title>
+    <title>NSL Forge - Craft Your Vision</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy-blue: #1A237E; /* Darker navy */
-            --royal-blue: #4169E1; /* Standard royal blue */
-            --light-blue: #E0F2F7; /* Very light blue for background contrast */
+            --dark-charcoal: #2F4F4F; /* Darker, sophisticated grey-blue */
+            --steel-blue: #4682B4;    /* A classic steel blue */
+            --powder-blue: #B0E0E6;   /* Soft, light blue for background */
             --white: #FFFFFF;
             --text-color: #333333;
-            --border-color: #CCCCCC;
-            --shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
-            --hover-shadow-color: rgba(0, 0, 0, 0.2); /* Even darker shadow on hover */
+            --border-color: #A9A9A9;  /* Darker grey for borders */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --hover-shadow-color: rgba(0, 0, 0, 0.18);
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light-blue);
+            background-color: var(--powder-blue);
             color: var(--text-color);
             display: flex;
             justify-content: center;
@@ -34,29 +34,31 @@
 
         .container {
             background-color: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 6px 24px var(--shadow-color); /* Increased shadow and darker */
-            padding: 40px;
+            border-radius: 15px; /* Slightly more rounded corners */
+            box-shadow: 0 8px 30px var(--shadow-color); /* Enhanced shadow */
+            padding: 45px;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px; /* Slightly wider container */
             text-align: center;
             box-sizing: border-box;
         }
 
         header {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         header h1 {
-            color: var(--navy-blue);
-            font-size: 2.7em; /* Slightly larger heading */
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 0 var(--shadow-color); /* Subtle text shadow */
+            font-family: 'Playfair Display', serif; /* Elegant heading font */
+            color: var(--dark-charcoal);
+            font-size: 3em; /* Larger and more impactful */
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Softer text shadow */
         }
 
         header p {
-            color: #666;
-            font-size: 1.2em; /* Slightly larger paragraph text */
+            color: #555;
+            font-size: 1.15em;
+            line-height: 1.6;
         }
 
         form {
@@ -64,91 +66,112 @@
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .form-group label {
             display: block;
-            font-size: 1.1em;
-            color: var(--navy-blue);
-            margin-bottom: 8px;
+            font-size: 1.15em;
+            color: var(--dark-charcoal);
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="tel"] {
-            width: calc(100% - 20px); /* Adjusting for padding */
-            padding: 12px 10px;
+            width: calc(100% - 24px); /* Adjusting for padding */
+            padding: 14px 12px;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1em;
+            border-radius: 10px; /* More rounded input fields */
+            font-size: 1.05em;
             color: var(--text-color);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Lighter inner shadow */
         }
 
         .form-group input[type="file"] {
             width: 100%;
-            padding: 12px 0;
+            padding: 14px 0;
             border: none;
-            border-radius: 8px;
-            font-size: 1em;
+            border-radius: 10px;
+            font-size: 1.05em;
             color: var(--text-color);
             cursor: pointer;
+            outline: none; /* Remove default outline */
         }
 
         .form-group input[type="text"]:focus,
         .form-group input[type="email"]:focus,
         .form-group input[type="tel"]:focus,
         .form-group input[type="file"]:focus {
-            border-color: var(--royal-blue);
-            box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2); /* Royal blue shadow */
+            border-color: var(--steel-blue);
+            box-shadow: 0 0 0 4px rgba(70, 130, 180, 0.25); /* Steel blue shadow */
             outline: none;
         }
 
         .form-group small {
             display: block;
-            margin-top: 5px;
-            color: #777;
-            font-size: 0.9em;
+            margin-top: 7px;
+            color: #888;
+            font-size: 0.95em;
         }
 
         .required {
-            color: red;
+            color: #D32F2F; /* A softer red for required fields */
             font-weight: normal;
         }
 
         button[type="submit"] {
-            background-color: var(--royal-blue);
+            background-color: var(--steel-blue);
             color: var(--white);
-            padding: 15px 30px;
+            padding: 16px 35px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.2em;
+            border-radius: 10px; /* More rounded button */
+            font-size: 1.3em;
             font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added shadow transition */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             width: 100%;
-            margin-top: 20px;
-            box-shadow: 0 4px 12px var(--shadow-color); /* Added initial shadow */
+            margin-top: 25px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            letter-spacing: 0.5px; /* Slight letter spacing for readability */
         }
 
         button[type="submit"]:hover {
-            background-color: var(--navy-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px var(--hover-shadow-color); /* Darker shadow on hover */
+            background-color: var(--dark-charcoal);
+            transform: translateY(-3px); /* More pronounced lift */
+            box-shadow: 0 8px 20px var(--hover-shadow-color);
         }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .container {
-                margin: 20px;
-                padding: 25px;
+                margin: 15px;
+                padding: 30px;
             }
 
             header h1 {
-                font-size: 2.3em;
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .form-group label {
+                font-size: 1em;
+            }
+
+            button[type="submit"] {
+                font-size: 1.1em;
+                padding: 14px 25px;
             }
         }
     </style>
@@ -156,35 +179,35 @@
 <body>
     <div class="container">
         <header>
-            <h1>NSL Forge Commission Request</h1>
-            <p>Please fill out the form below to submit your commission request.</p>
+            <h1>NSL Forge: Craft Your Vision</h1>
+            <p>We're excited to help bring your unique ideas to life. Please share your details below to begin your custom commission.</p>
         </header>
 
         <main>
             <form action="https://formsubmit.co/nslcreatesofficial@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <label for="name">Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="Name" required>
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="reference-image">Reference Image <span class="required">*</span></label>
+                    <label for="reference-image">Reference Image (Your Inspiration) <span class="required">*</span></label>
                     <input type="file" id="reference-image" name="Reference_Image" accept="image/*" required>
-                    <small>Accepted formats: JPG, PNG, GIF, etc.</small>
+                    <small>Please upload an image that inspires your commission. (Accepted formats: JPG, PNG, GIF, etc.)</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email (Optional)</label>
-                    <input type="email" id="email" name="Email">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" id="email" name="Email" placeholder="e.g., yourname@example.com">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="Phone_Number" required>
+                    <input type="tel" id="phone" name="Phone_Number" placeholder="e.g., +91 9876543210" required>
                 </div>
 
-                <button type="submit">Submit Request</button>
+                <button type="submit">Submit Your Request</button>
             </form>
         </main>
     </div>
