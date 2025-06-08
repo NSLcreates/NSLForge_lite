@@ -4,10 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSL Forge - Commission Request</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-blue: #1A237E; /* Darker navy */
+            --royal-blue: #4169E1; /* Standard royal blue */
+            --light-blue: #E0F2F7; /* Very light blue for background contrast */
+            --white: #FFFFFF;
+            --text-color: #333333;
+            --border-color: #CCCCCC;
+            --shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+            --hover-shadow-color: rgba(0, 0, 0, 0.2); /* Even darker shadow on hover */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-blue);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 6px 24px var(--shadow-color); /* Increased shadow and darker */
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--navy-blue);
+            font-size: 2.7em; /* Slightly larger heading */
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 0 var(--shadow-color); /* Subtle text shadow */
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.2em; /* Slightly larger paragraph text */
+        }
+
+        form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            color: var(--navy-blue);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: calc(100% - 20px); /* Adjusting for padding */
+            padding: 12px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--text-color);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+        }
+
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="file"]:focus {
+            border-color: var(--royal-blue);
+            box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2); /* Royal blue shadow */
+            outline: none;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .required {
+            color: red;
+            font-weight: normal;
+        }
+
+        button[type="submit"] {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added shadow transition */
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color); /* Added initial shadow */
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--navy-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px var(--hover-shadow-color); /* Darker shadow on hover */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 2.3em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
